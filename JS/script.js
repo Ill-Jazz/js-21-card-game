@@ -198,7 +198,8 @@ function checkForEndOfGame() {
         while (
             dealerScore < playerScore &&
             playerScore <= 21 &&
-            dealerScore <= 21
+            dealerScore <= 21 &&
+            dealerScore !== 15 // Dealer stops drawing cards when reaching score of 15
             ) {
             dealerCards.push(getNextCard());
             updateScores();
